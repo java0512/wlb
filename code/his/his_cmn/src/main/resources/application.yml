@@ -1,0 +1,24 @@
+server:
+  port: 16002
+spring:
+  application:
+    name: his-cmn
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/yygh_cmn?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:16000/eureka
+
+logging:
+  level:
+    com.hainet.his: debug
+    root: warn
+  pattern:
+    console: "%d{yyyy-MM-dd} [%thread] - %msg%n"
